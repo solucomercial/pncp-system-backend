@@ -7,6 +7,14 @@
     "@types/bcryptjs": "^3.0.0",
     "@types/bun": "latest"
   },
+"scripts": {
+   "dev": "bun --watch src/index.ts",
+   "start": "bun src/index.ts",
+   "db:generate": "prisma generate",
+   "db:migrate": "prisma migrate dev",
+   "db:deploy": "prisma migrate deploy",
+   "db:studio": "prisma studio"
+ },
   "peerDependencies": {
     "typescript": "^5"
   },
