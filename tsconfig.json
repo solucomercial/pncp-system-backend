@@ -1,0 +1,23 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ESNext", // Bun suporta as features mais recentes
+    "module": "ESNext",
+    "moduleResolution": "bundler", // Recomendado pelo Bun/Elysia
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, // Habilita checagens estritas
+    "skipLibCheck": true, // Evita checar tipos de libs de terceiros
+    "jsx": "react-jsx", // Se for usar JSX com Elysia (opcional)
+    "outDir": "./dist", // Opcional: para builds
+    "rootDir": "./src",
+    "baseUrl": "./src", // Permite imports a partir de 'src/'
+    "paths": {
+      "@/*": ["*"] // Exemplo: import ... from '@/modules/auth/...'
+    },
+    // Tipos específicos do Bun
+    "types": ["bun"]
+  },
+  "include": ["src/**/*"], // Inclui todos os arquivos dentro de src
+  "exclude": ["node_modules", "dist"] // Exclui pastas
+}
